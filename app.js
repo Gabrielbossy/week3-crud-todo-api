@@ -2,6 +2,10 @@ const express = require('express');
 const app = express();
 app.use(express.json()); // Parse JSON bodies
 
+app.get("/", (req, res) => {
+  res.send("Week 3 Todo API is running!");
+});
+
 let todos = [
   { id: 1, task: 'Learn Node.js', completed: false },
   { id: 2, task: 'Build CRUD API', completed: false },
